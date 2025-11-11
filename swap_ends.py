@@ -1,4 +1,14 @@
 def swap_ends(L, k):
-    ### Replace with your own code (begin) ###
-    pass
-    ### Replace with your own code (end)   ###
+   if k <= 0 or len(L) == 0 or k > len(L) // 2:
+      return L.copy(),0
+
+   new_l = L.copy()
+   new_l[:k], new_l[-k:] = L[-k:], L[:k]
+
+   return new_l, k
+
+
+
+
+
+
